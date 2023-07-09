@@ -1,0 +1,56 @@
+POST http://localhost:3000/register/
+Content-Type: application/json
+
+{
+  "username": "adam_richard",
+  "password": "richard_567",
+  "name": "Adam Richard",
+  "gender": "male"
+}
+
+###
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+  "username":"JoeBiden",
+  "password":"biden@123",
+}
+
+###
+GET http://localhost:3000/user/tweets/feed/
+Authorization: Bearer eyhbGciOiJIUzI1NiIsIn5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuliwiaWF0IjoxNjg1MTcyMjgwfQ.qUtkfaCDXpICJ_Osv9smwpbxz6FIipxzAAn51WYB6Es_A
+
+###
+GET http://localhost:3000/user/following/
+Authorization: Bearer eyhbGciOiJIUzI1NiIsIn5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuliwiaWF0IjoxNjg1MTcyMjgwfQ.qUtkfaCDXpICJ_Osv9smwpbxz6FIipxzAAn51WYB6Es_A
+
+###
+GET http://localhost:3000/user/followers/
+Authorization: Bearer eyJhbGciOiJIUzIINiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSIGIkpvZUJpZGvuliwiaWF0IjoxNjgIMDg0Mjk5fQ.jVch3GEouAY0OmPT3M-KEO55-9Ka-JabkSFXTdBGY_A
+
+###
+GET http://localhost:3000/tweets/:tweetId/
+Authorization: Bearer eyJhbGciOiJIUzIINiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSIGIkpvZUJpZGvuliwiaWF0IjoxNjgIMDg0Mjk5fQ.jVch3GEouAY0OmPT3M-KEO55-9Ka-JabkSFXTdBGY_A
+
+###
+GET http://localhost:3000/tweets/:tweetId/likes/
+Authorization: Bearer eyJhbGciOiJIUzIINiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSIGIkpvZUJpZGvuliwiaWF0IjoxNjgIMDg0Mjk5fQ.jVch3GEouAY0OmPT3M-KEO55-9Ka-JabkSFXTdBGY_A
+
+
+###
+GET http;//localhost:3000/tweets/:tweetId/replies/
+Authorization: Bearer eyJhbGciOiJIUzIINiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSIGIkpvZUJpZGvuliwiaWF0IjoxNjgIMDg0Mjk5fQ.jVch3GEouAY0OmPT3M-KEO55-9Ka-JabkSFXTdBGY_A
+
+###
+GET http://localhost:3000/user/tweets/
+Authorization: Bearer eyJhbGciOiJIUzIINiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSIGIkpvZUJpZGvuliwiaWF0IjoxNjgIMDg0Mjk5fQ.jVch3GEouAY0OmPT3M-KEO55-9Ka-JabkSFXTdBGY_A
+
+###
+POST http://localhost:3000/user/tweets/
+Authorization: Bearer eyJhbGciOiJIUzIINiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSIGIkpvZUJpZGvuliwiaWF0IjoxNjgIMDg0Mjk5fQ.jVch3GEouAY0OmPT3M-KEO55-9Ka-JabkSFXTdBGY_A
+
+
+###
+DELETE http://localhost:3000/tweets/:tweetId/
+Authorization: Bearer eyJhbGciOiJIUzIINiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSIGIkpvZUJpZGvuliwiaWF0IjoxNjgIMDg0Mjk5fQ.jVch3GEouAY0OmPT3M-KEO55-9Ka-JabkSFXTdBGY_A
