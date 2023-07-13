@@ -100,12 +100,10 @@ app.get(
   "/user/tweets/feed/",
   authenticationToken,
   async (request, response) => {
-    const getUserTweetsQuery = `SELECT user.username, tweet.tweet, tweet.date_time AS dateTime 
-    FROM follower INNER JOIN tweet ON follower.following_user_id=tweet.user_id 
-    INNER JOIN user ON tweet.user_id=user.user_id WHERE follower.follower_user_id=${follower.following_user_id}
-        ORDER BY tweet.date_time DESC LIMIT 4;`;
-    const dbResponse = await db.all(getUserTweetsQuery);
-    response.send(dbResponse);
+    const { username } = request;
+    const selectUserQuery = `SELECT user_id FROM user WHERE username = '${username}';`;
+    const user = await db.all(selectUserQuery);
+    response.send(user);
   }
 );
 
