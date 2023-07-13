@@ -39,7 +39,7 @@ Authorization: Bearer eyJhbGciOiJIUzIINiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSIGIkpvZ
 
 
 ###
-GET http;//localhost:3000/tweets/:tweetId/replies/
+GET http://localhost:3000/tweets/:tweetId/replies/
 Authorization: Bearer eyJhbGciOiJIUzIINiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSIGIkpvZUJpZGvuliwiaWF0IjoxNjgIMDg0Mjk5fQ.jVch3GEouAY0OmPT3M-KEO55-9Ka-JabkSFXTdBGY_A
 
 ###
